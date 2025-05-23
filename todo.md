@@ -1,8 +1,8 @@
-# Todo
+# Tarefas
 
-You can create todos in Foam.
+Você pode criar tarefas no Foam.
 
-- [x] This is an example of a todo list item that's complete
-- [ ] This one is not completed yet
-- [ ] You can mark it completed by pressing `Option`+`C` (or `Alt`+`C`) when your cursor is on this line
-  - [ ] You can also select multiple lines and mark them all at once!
+- [x] Este é um exemplo de um item da lista de tarefas que está completo
+- [ ] Este ainda não está completo
+- [ ] Você pode marcá-lo como completo pressionando `Option`+`C` (ou `Alt`+`C`) quando seu cursor estiver nesta linha
+  - [ ] Você também pode selecionar várias linhas e marcá-las todas de uma vez!

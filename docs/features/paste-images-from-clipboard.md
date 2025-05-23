@@ -1,12 +1,12 @@
-# Paste Images from Clipboard
+# Colar Imagens do Clipboard
 
-By installing the [vscode-paste-image](https://github.com/mushanshitiancai/vscode-paste-image) extension, you can paste an image from the clipboard with `cmd+alt+v`.
+Ao instalar a extensão [vscode-paste-image](https://github.com/mushanshitiancai/vscode-paste-image), você pode colar uma imagem do clipboard com `cmd+alt+v`.
 
-Images are automatically copied to the `/attachments` folder and a reference is added in the file where you pasted them.
+As imagens são automaticamente copiadas para a pasta `/attachments` e uma referência é adicionada no arquivo onde você as colou.
 
-A prompt will ask you to confirm the name of the image, to disable it set `"pasteImage.showFilePathConfirmInputBox": false,` in the settings.
+Um prompt perguntará para confirmar o nome da imagem, para desativá-lo defina `"pasteImage.showFilePathConfirmInputBox": false,` nas configurações.
 
-To change the location where the image is created, change the `pasteImage.path` property, e.g.:
+Para alterar o local onde a imagem é criada, altere a propriedade `pasteImage.path`, por exemplo:
 
-- `${currentFileDir}`: save the image next to the file
-- `${currentFileDir}/images`: create an `images` directory next to the file and save the image there
+- `${currentFileDir}`: salva a imagem ao lado do arquivo
+- `${currentFileDir}/images`: cria um diretório `images` ao lado do arquivo e salva a imagem lá

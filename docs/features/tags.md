@@ -4,40 +4,40 @@ tags: my-tag1 my-tag2 my-tag3/notes
 
 # Tags
 
-You can add tags to your notes to categorize or link notes together.
+Você pode adicionar tags às suas notas para categorizar ou conectar notas entre si.
 
-## Creating a tag
+## Criando uma tag
 
-There are two ways of creating a tag:
+Existem duas maneiras de criar uma tag:
 
-- Adding a `#tag` anywhere in the text of the note, for example: #my-tag1
-- Using the `tags: tag1, tag2` yaml frontmatter [[note-properties|note property]]. Notice `my-tag1` and `my-tag2` tags which are added to this document this way.
+- Adicionando uma `#tag` em qualquer lugar no texto da nota, por exemplo: #my-tag1
+- Usando a propriedade yaml frontmatter `tags: tag1, tag2` [[note-properties|propriedade da nota]]. Observe as tags `my-tag1` e `my-tag2` que foram adicionadas a este documento desta maneira.
 
-Tags can also be hierarchical, so you can have `#parent/child` such as #my-tag3/info.
+As tags também podem ser hierárquicas, então você pode ter `#pai/filho` como #my-tag3/info.
 
-### Tag completion
+### Autocompletar de tags
 
-Typing the `#` character will launch VS Code's "Intellisense." This provider will show a list of possible tags that match the character. If you are editing in the frontmatter [[note-properties|note property]], you can invoke tag completion on the `tags:` line by either typing the `#` character, or using the ["trigger suggest"](https://code.visualstudio.com/docs/editor/intellisense) keybinding (usually `ctrl+space`). If the `#` is used in the frontmatter, it will be removed when the tag is inserted.
+Digitar o caractere `#` iniciará o "Intellisense" do VS Code. Este provedor mostrará uma lista de possíveis tags que correspondem ao caractere. Se você estiver editando na [[note-properties|propriedade da nota]] frontmatter, você pode invocar o autocompletar de tags na linha `tags:` digitando o caractere `#` ou usando o atalho ["trigger suggest"](https://code.visualstudio.com/docs/editor/intellisense) (geralmente `ctrl+space`). Se o `#` for usado no frontmatter, ele será removido quando a tag for inserida.
 
-## Using *Tag Explorer*
+## Usando o *Tag Explorer*
 
-It's possible to navigate tags via the Tag Explorer panel. Expand the Tag Explorer view in the left side bar which will list all the tags found in current Foam environment. Then, each level of tags can be expanded until the options to search by tag and a list of all files containing a particular tag are shown.
+É possível navegar pelas tags através do painel Tag Explorer. Expanda a visualização do Tag Explorer na barra lateral esquerda, que listará todas as tags encontradas no ambiente Foam atual. Em seguida, cada nível de tags pode ser expandido até que sejam mostradas as opções para pesquisar por tag e uma lista de todos os arquivos contendo uma tag específica.
 
-Tags can also be visualized in the Foam Graph Explorer. See [[graph-visualization]] for more info including how to change the color of nodes representing tags.
+As tags também podem ser visualizadas no Foam Graph Explorer. Veja [[graph-visualization]] para mais informações, incluindo como mudar a cor dos nós que representam tags.
 
-## Styling tags
+## Estilizando tags
 
-It is possible to customize the way that tags look in the Markdown Preview panel that renders your Foam notes. This requires some knowledge of the CSS language, which is used to customize the styles of web technologies such as VSCode. A cursory introduction to CSS can be [found here](https://www.freecodecamp.org/news/get-started-with-css-in-5-minutes-e0804813fc3e/).
+É possível personalizar a aparência das tags no painel de Visualização Markdown que renderiza suas notas Foam. Isso requer algum conhecimento da linguagem CSS, que é usada para personalizar os estilos de tecnologias web como o VSCode. Uma introdução básica ao CSS pode ser [encontrada aqui](https://www.freecodecamp.org/news/get-started-with-css-in-5-minutes-e0804813fc3e/).
 
-1. Create a CSS file within your Foam project, for example in `.foam/css/custom-tag-style.css` or [.vscode/custom-tag-style.css](../../.vscode/custom-tag-style.css)
-2. Add CSS code that targets the `.foam-tag` class
-3. Add a rule for each [CSS property](https://www.w3schools.com/cssref/index.php) you would like applied to your tags.
-4. Open the `.vscode/settings.json` file (or the Settings browser with `ctrl+,`)
-5. Add the path to your new stylesheet to the `markdown.styles` setting.
+1. Crie um arquivo CSS dentro do seu projeto Foam, por exemplo em `.foam/css/custom-tag-style.css` ou [.vscode/custom-tag-style.css](../../.vscode/custom-tag-style.css)
+2. Adicione código CSS que direcione a classe `.foam-tag`
+3. Adicione uma regra para cada [propriedade CSS](https://www.w3schools.com/cssref/index.php) que você gostaria de aplicar às suas tags.
+4. Abra o arquivo `.vscode/settings.json` (ou o navegador de Configurações com `ctrl+,`)
+5. Adicione o caminho para sua nova folha de estilos na configuração `markdown.styles`.
 
-> Note: the file path for the stylesheet will be relative to the currently open folder in the workspace when changing this setting for the current workspace. If changing this setting for the user, then the file path will be relative to your global [VSCode settings](https://code.visualstudio.com/docs/getstarted/settings).
+> Nota: o caminho do arquivo para a folha de estilos será relativo à pasta atualmente aberta no espaço de trabalho ao alterar esta configuração para o espaço de trabalho atual. Se estiver alterando esta configuração para o usuário, então o caminho do arquivo será relativo às suas [configurações globais do VSCode](https://code.visualstudio.com/docs/getstarted/settings).
 
-The end result will be a CSS file that looks similar to the content below. Now you can make your tags standout in your note previews.
+O resultado final será um arquivo CSS que se parece com o conteúdo abaixo. Agora você pode fazer suas tags se destacarem nas visualizações de suas notas.
 
 ```css
 .foam-tag{
@@ -46,13 +46,13 @@ The end result will be a CSS file that looks similar to the content below. Now y
 }
 ```
 
-![custom tag style demo](../../assets/images/custom-tag-style.png)
+![demonstração de estilo personalizado de tag](../../assets/images/custom-tag-style.png)
 
-## Using backlinks in place of tags
+## Usando backlinks no lugar de tags
 
-Given the power of backlinks, some people prefer to use them as tags.
-For example you can tag your notes about books with [[book]].
+Dado o poder dos backlinks, algumas pessoas preferem usá-los como tags.
+Por exemplo, você pode marcar suas notas sobre livros com [[book]].
 
-[note-properties|note property]: note-properties.md "Note Properties"
-[graph-visualization]: graph-visualization.md "Graph Visualization"
+[note-properties|propriedade da nota]: note-properties.md "Propriedades da Nota"
+[graph-visualization]: graph-visualization.md "Visualização do Grafo"
 

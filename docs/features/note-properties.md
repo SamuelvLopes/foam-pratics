@@ -4,13 +4,13 @@ keywords: hello world, bonjour
 tags: [hello, bonjour]
 ---
 
-# Note Properties
+# Propriedades de Notas
 
-At the top of the file you can have a section where you define your properties. This section is known as the [Front-Matter](https://learn.cloudcannon.com/jekyll/introduction-to-jekyll-front-matter/) of the document and uses [YAML formatting](https://www.codeproject.com/Articles/1214409/Learn-YAML-in-five-minutes).
+No topo do arquivo você pode ter uma seção onde define suas propriedades. Esta seção é conhecida como [Front-Matter](https://learn.cloudcannon.com/jekyll/introduction-to-jekyll-front-matter/) do documento e usa [formatação YAML](https://www.codeproject.com/Articles/1214409/Learn-YAML-in-five-minutes).
 
-> Be aware that this YAML section needs to be at the very top of the file to be valid.
+> Esteja ciente de que esta seção YAML precisa estar no topo do arquivo para ser válida.
 
-For example, for this file, we have:
+Por exemplo, para este arquivo, temos:
 
 ```markdown
 ---
@@ -19,33 +19,33 @@ keywords: hello world, bonjour
 ---
 ```
 
-This sets the `type` of this document to `feature` and sets **three** keywords for the document: `hello`, `world`, and `bonjour`. The YAML parser will treat both spaces and commas as the separators for these YAML properties. If you want to use multi-word values for these properties, you will need to combine the words with dashes or underscores (i.e. instead of `hello world`, use `hello_world` or `hello-world`).
+Isso define o `type` deste documento como `feature` e define **três** palavras-chave para o documento: `hello`, `world` e `bonjour`. O analisador YAML tratará tanto espaços quanto vírgulas como separadores para essas propriedades YAML. Se você quiser usar valores com múltiplas palavras para essas propriedades, precisará combinar as palavras com hífens ou sublinhados (ou seja, em vez de `hello world`, use `hello_world` ou `hello-world`).
 
-> You can set as many custom properties for a document as you like, but there are a few [special properties](#special-properties) defined by Foam.
+> Você pode definir quantas propriedades personalizadas quiser para um documento, mas existem algumas [propriedades especiais](#propriedades-especiais) definidas pelo Foam.
 
-## Special Properties
+## Propriedades Especiais
 
-Some properties have special meaning for Foam:
+Algumas propriedades têm significado especial para o Foam:
 
-| Name    | Description                                                                                                                                                                      |
+| Nome    | Descrição                                                                                                                                                                      |
 | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `title` | will assign the name to the note that you will see in the graph, regardless of the filename or the first heading (also see how to [[write-notes-in-foam]])                       |
-| `type`  | can be used to style notes differently in the graph (also see [[graph-visualization]]). The default type for a document is `note` unless otherwise specified with this property. |
-| `tags`  | can be used to add tags to a note (see [[tags]])                                                                                                                                 |
-| `alias` | can be used to add aliases to the note. an alias will show up in the link autocompletion                                                                                         |
+| `title` | atribuirá o nome à nota que você verá no grafo, independentemente do nome do arquivo ou do primeiro cabeçalho (veja também como [[write-notes-in-foam]])                       |
+| `type`  | pode ser usado para estilizar notas de forma diferente no grafo (veja também [[graph-visualization]]). O tipo padrão para um documento é `note` a menos que seja especificado de outra forma com esta propriedade. |
+| `tags`  | pode ser usado para adicionar tags a uma nota (veja [[tags]])                                                                                                                                 |
+| `alias` | pode ser usado para adicionar aliases à nota. um alias aparecerá no autocompletar de links                                                                                         |
 
-For example:
+Por exemplo:
 
 ```markdown
 ---
-title: "Note Title"
+title: "Título da Nota"
 type: "daily-note"
 tags: daily, funny, planning
 alias: alias1, alias2
 ---
 ```
 
-## Foam Template Properties
+## Propriedades de Modelos do Foam
 
-There also exists properties that are even more specific to Foam templates, see [[note-templates#Metadata]] for more info.
+Também existem propriedades que são ainda mais específicas para modelos do Foam, veja [[note-templates#Metadata]] para mais informações.
 

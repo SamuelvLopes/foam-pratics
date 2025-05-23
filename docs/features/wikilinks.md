@@ -1,37 +1,37 @@
 # Wikilinks
 
-Wikilinks are the internal links that connect the files in your knowledge base. (Also called `[[MediaWiki]]` links).
+Wikilinks são os links internos que conectam os arquivos em sua base de conhecimento. (Também chamados de links `[[MediaWiki]]`).
 
-## Creating and navigating wikilinks
+## Criando e navegando por wikilinks
 
-To create a wikilink, type `[[` and then start typing the name of another note in your repo. Once the desired note is selected press the `tab` key to autocomplete it. For example: [[graph-visualization]].
+Para criar um wikilink, digite `[[` e então comece a digitar o nome de outra nota em seu repositório. Uma vez que a nota desejada seja selecionada, pressione a tecla `tab` para autocompletar. Por exemplo: [[graph-visualization]].
 
-`Cmd` + `Click` ( `Ctrl` + `Click` on Windows ) on wikilink to navigate to that note (`F12` also works while your cursor is on the wikilink). If the file doesn't exist it will be created in your workspace based on your default [[note-templates]] settings.
+`Cmd` + `Click` (`Ctrl` + `Click` no Windows) em um wikilink para navegar até aquela nota (`F12` também funciona enquanto seu cursor estiver no wikilink). Se o arquivo não existir, ele será criado em seu espaço de trabalho com base nas suas configurações padrão de [[note-templates]].
 
 ## Placeholders
 
-You can also create a [[placeholder]]. <!--NOTE: this placeholder link should NOT have an associated file. This is to demonstrate the concept-->
-A placeholder is a wikilink that doesn't have a target file and a link to a placeholder is styled differently so you can easily tell them apart.
-They can still be helpful to highlight connections.
+Você também pode criar um [[placeholder]]. <!--NOTE: this placeholder link should NOT have an associated file. This is to demonstrate the concept-->
+Um placeholder é um wikilink que não tem um arquivo de destino e um link para um placeholder é estilizado de forma diferente para que você possa facilmente diferenciá-los.
+Eles ainda podem ser úteis para destacar conexões.
 
-Open the graph with `Foam: Show Graph` command, and look at the placeholder node.
+Abra o grafo com o comando `Foam: Show Graph` e observe o nó do placeholder.
 
-Remember, with `CTRL/CMD+click` on a wikilink you can navigate to the note, or create it (if the link is a placeholder).
+Lembre-se, com `CTRL/CMD+click` em um wikilink você pode navegar até a nota ou criá-la (se o link for um placeholder).
 
-## Support for sections
+## Suporte para seções
 
-Foam supports autocompletion, navigation, embedding and diagnostics for note sections. Just use the standard wiki syntax of `[[resource#Section Title]]`. 
-- If it's an external file, `[your link will need the filename](other-file.md#that-section-I-want-to-link-to)`, but
-- if it's an anchor within the same document, `[you just need an octothorpe and the section name](#that-section-above)`.  
-- Doesn't matter what heading-level the anchor is; whether you're linking to an `H1` like `# MEN WALK ON MOON` or an `H2` like `## Astronauts Land on Plain`, the link syntax uses a single octothorpe: `[Walk!](#men-walk-on-moon)` and `[Land!](#astronauts-land-on-plain-collect-rocks-plant-flag)`. Autocomplete is your friend here.
+O Foam suporta autocompletar, navegação, incorporação e diagnósticos para seções de notas. Basta usar a sintaxe wiki padrão de `[[recurso#Título da Seção]]`. 
+- Se for um arquivo externo, `[seu link precisará do nome do arquivo](outro-arquivo.md#aquela-secao-que-quero-linkar)`, mas
+- se for uma âncora dentro do mesmo documento, `[você só precisa de uma cerquilha e o nome da seção](#aquela-secao-acima)`.  
+- Não importa qual o nível do cabeçalho da âncora; seja você esteja linkando para um `H1` como `# HOMENS ANDAM NA LUA` ou um `H2` como `## Astronautas Pousam na Planície`, a sintaxe do link usa uma única cerquilha: `[Andar!](#homens-andam-na-lua)` e `[Pousar!](#astronautas-pousam-na-planicie)`. O autocompletar é seu amigo aqui.
 
-## Markdown compatibility
+## Compatibilidade com Markdown
 
-The [Foam for VSCode](https://marketplace.visualstudio.com/items?itemName=foam.foam-vscode) extension automatically generates [[link-reference-definitions]] at the bottom of the file to make wikilinks compatible with other Markdown tools and parsers.
+A extensão [Foam for VSCode](https://marketplace.visualstudio.com/items?itemName=foam.foam-vscode) gera automaticamente [[link-reference-definitions]] no final do arquivo para tornar os wikilinks compatíveis com outras ferramentas e analisadores de Markdown.
 
-## Read more
+## Leia mais
 
 - [[foam-file-format]]
 - [[note-templates]]
-- See [[link-reference-definition-improvements]] for further discussion on current problems and potential solutions.
+- Veja [[link-reference-definition-improvements]] para mais discussões sobre problemas atuais e possíveis soluções.
 

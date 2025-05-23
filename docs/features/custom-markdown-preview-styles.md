@@ -1,12 +1,12 @@
-# Custom Markdown Preview Styles
+# Estilos Personalizados de Visualização Markdown
 
-Visual Studio Code allows you to use your own CSS in the Markdown preview tab.
+O Visual Studio Code permite que você use seu próprio CSS na aba de visualização Markdown.
 
-## Instructions
+## Instruções
 
-Custom CSS for the Markdown preview can be implemented by using the `"markdown.styles": []` setting in `settings.json`. The stylesheets can either be https URLs or relative paths to local files in the current workspace.
+CSS personalizado para a visualização Markdown pode ser implementado usando a configuração `"markdown.styles": []` no `settings.json`. As folhas de estilo podem ser URLs https ou caminhos relativos para arquivos locais no espaço de trabalho atual.
 
-For example, to load a stylesheet called `Style.css`, we can update `settings.json` with the following line:
+Por exemplo, para carregar uma folha de estilo chamada `Style.css`, podemos atualizar o `settings.json` com a seguinte linha:
 
 ```
 {
@@ -14,15 +14,15 @@ For example, to load a stylesheet called `Style.css`, we can update `settings.js
 }
 ```
 
-## Foam elements
+## Elementos do Foam
 
-### Foam note & placeholder links
+### Links de notas e placeholders do Foam
 
-It is possible to custom style the links to a note or placeholder. The links are an `<a>` tag. For notes use the class `foam-note-link`, for placeholders use `foam-placeholder-link`.
+É possível personalizar o estilo dos links para uma nota ou placeholder. Os links são uma tag `<a>`. Para notas, use a classe `foam-note-link`, para placeholders use `foam-placeholder-link`.
 
-### Cyclic inclusion warnings
+### Avisos de inclusão cíclica
 
-Foams offers the functionality to include other notes in your note. This will be displayed in the preview tab. Foam recognises a cyclic inclusion of notes and will display a warning when detected. The following html is used and can be custom styled using the class `foam-cyclic-link-warning`.
+O Foam oferece a funcionalidade de incluir outras notas em sua nota. Isso será exibido na aba de visualização. O Foam reconhece uma inclusão cíclica de notas e exibirá um aviso quando detectado. O seguinte HTML é usado e pode ser estilizado usando a classe `foam-cyclic-link-warning`.
 
 ```html
 <div class="foam-cyclic-link-warning">

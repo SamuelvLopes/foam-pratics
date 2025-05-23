@@ -1,9 +1,9 @@
-# Spell Checking
+# Verificação Ortográfica
 
-There are many spell checking extensions for VS Code.
+Existem muitas extensões de verificação ortográfica para o VS Code.
 
-The most popular spell checker for VS Code is [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker).
+O verificador ortográfico mais popular para o VS Code é o [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker).
 
-Another one of our favorites is [LTeX](https://marketplace.visualstudio.com/items?itemName=valentjn.vscode-ltex&ssr=false#overview), which is a bit heavier but offers some extra functionality.
+Um dos nossos favoritos é o [LTeX](https://marketplace.visualstudio.com/items?itemName=valentjn.vscode-ltex&ssr=false#overview), que é um pouco mais pesado mas oferece algumas funcionalidades extras.
 
-Another popular one is [Spellright](https://marketplace.visualstudio.com/items?itemName=ban.spellright), but be mindful that there have been reports of incompatibility with the `vscode-markdown` extension (see https://github.com/foambubble/foam/issues/1068).
+Outro popular é o [Spellright](https://marketplace.visualstudio.com/items?itemName=ban.spellright), mas esteja ciente de que houve relatos de incompatibilidade com a extensão `vscode-markdown` (veja https://github.com/foambubble/foam/issues/1068).

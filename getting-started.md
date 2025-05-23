@@ -1,49 +1,49 @@
-# Getting Started
+# Começando
 
-Welcome to your new foam workspace, let's get you started.
+Bem-vindo ao seu novo espaço de trabalho Foam, vamos começar.
 
-> if you are already familiar with Foam and don't need help, just remove the `docs` folder for a clean repo.
+> se você já está familiarizado com o Foam e não precisa de ajuda, basta remover a pasta `docs` para ter um repositório limpo.
 
-Let's go through this to set up your repo:
+Vamos passar por isso para configurar seu repositório:
 
-- [ ] if you are new with VS Code, see how to [[get-started-with-vscode]] and how to [[use-keyboard-shortcuts-for-editing]]
+- [ ] se você é novo no VS Code, veja como [[get-started-with-vscode]] e como [[use-keyboard-shortcuts-for-editing]]
 
-- [ ] you can navigate the links between your notes by `cmd+click` (or `ctrl+click` on Windows) on a wikilink. You can go back with `ctrl+-`. Here, go to your [[inbox]]
+- [ ] você pode navegar pelos links entre suas notas clicando com `cmd+click` (ou `ctrl+click` no Windows) em um wikilink. Você pode voltar com `ctrl+-`. Aqui, vá para sua [[inbox]]
 
-- [ ] to see how your notes are connected, execute the `Foam: Show Graph` command. See [[graph-visualization]].
+- [ ] para ver como suas notas estão conectadas, execute o comando `Foam: Show Graph`. Veja [[graph-visualization]].
 
-- [ ] #tags can be used to further organize your content. Look at the `Tag Explorer` view on the left panel to find and navigate the tags in your knowledge base. See [[tags-and-tag-explorer]].
+- [ ] #tags podem ser usadas para organizar ainda mais seu conteúdo. Olhe a visualização do `Tag Explorer` no painel esquerdo para encontrar e navegar pelas tags em sua base de conhecimento. Veja [[tags-and-tag-explorer]].
 
-- [ ] Foam supports [[spell-checking]] via VS Code.
+- [ ] O Foam suporta [[spell-checking]] através do VS Code.
 
-- [ ] You can also paste images in your Foam, just press `cmd+alt+v` to create the image file and link to it from your note. See [[paste-images-from-clipboard]].
+- [ ] Você também pode colar imagens no seu Foam, basta pressionar `cmd+alt+v` para criar o arquivo de imagem e vinculá-lo à sua nota. Veja [[paste-images-from-clipboard]].
 
-- [ ] You can use Foam for your daily notes, or journaling. Execute now the `Foam: Open Daily Note` command to create a new file in your `journal` folder. See [[daily-notes]].
+- [ ] Você pode usar o Foam para suas notas diárias ou diário. Execute agora o comando `Foam: Open Daily Note` para criar um novo arquivo em sua pasta `journal`. Veja [[daily-notes]].
 
-- [ ] Want to see how to manage your tasks? Go to the [[todo]] note
+- [ ] Quer ver como gerenciar suas tarefas? Vá para a nota [[todo]]
 
-- [ ] The section at the end of this file contains wikilink definitions, which enable navigation of your notes from GitHub's web UI, and in general to make `[[wikilinks]]` understood by any Markdown parser. See [[link-reference-definitions]].
+- [ ] A seção no final deste arquivo contém definições de wikilink, que permitem a navegação de suas notas pela interface web do GitHub e, em geral, fazem com que os `[[wikilinks]]` sejam entendidos por qualquer analisador Markdown. Veja [[link-reference-definitions]].
 
-- [ ] To explore all the Foam settings, press `cmd+,`, then `Extensions > Foam`
+- [ ] Para explorar todas as configurações do Foam, pressione `cmd+,`, depois `Extensions > Foam`
 
-- [ ] Living within VS Code, Foam can be customized in many ways! Look at the [Foam Recipes](https://foambubble.github.io/foam/user/recipes/recipes) for ideas!
+- [ ] Vivendo dentro do VS Code, o Foam pode ser personalizado de muitas maneiras! Dê uma olhada nas [Receitas do Foam](https://foambubble.github.io/foam/user/recipes/recipes) para ideias!
 
-- [ ] Join the [Foam community on Discord](https://foambubble.github.io/join-discord/e), introduce yourself and leave a message on how you found Foam and how the onboarding went :) We are always keen to do better
+- [ ] Junte-se à [comunidade Foam no Discord](https://foambubble.github.io/join-discord/e), apresente-se e deixe uma mensagem sobre como você encontrou o Foam e como foi a integração :) Estamos sempre interessados em melhorar
 
-- [ ] Take the [Foam Welcome survey](http://foambubble.github.io/welcome-survey/e)! It helps us better understand your need and how we can make Foam better and better for you :)
+- [ ] Participe da [pesquisa de boas-vindas do Foam](http://foambubble.github.io/welcome-survey/e)! Isso nos ajuda a entender melhor sua necessidade e como podemos tornar o Foam cada vez melhor para você :)
 
-## Advanced Features
+## Recursos Avançados
 
-- [ ] You can create [[note-templates]] for things like book reviews, people, daily notes (coming soon), and more!
+- [ ] Você pode criar [[note-templates]] para coisas como resenhas de livros, pessoas, notas diárias (em breve) e muito mais!
 
-## About Foam
+## Sobre o Foam
 
-Foam doesn't do all this magic on its own, it relies on some amazing extensions. Look at their documentation if you want to fully unlock the possibilities!
+O Foam não faz toda essa mágica sozinho, ele depende de algumas extensões incríveis. Dê uma olhada na documentação delas se você quiser desbloquear totalmente as possibilidades!
 
-Here they are:
+Aqui estão elas:
 
 - [Markdown All In One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
 - [vscode-paste-image](https://github.com/mushanshitiancai/vscode-paste-image)
 
-A special mention goes to [Markdown Links](https://marketplace.visualstudio.com/items?itemName=tchayen.markdown-links) and [Markdown Notes](https://marketplace.visualstudio.com/items?itemName=kortina.vscode-markdown-notes) which have now been replaced by our own implementation but were foundational to Foam's beginnings.
+Uma menção especial vai para [Markdown Links](https://marketplace.visualstudio.com/items?itemName=tchayen.markdown-links) e [Markdown Notes](https://marketplace.visualstudio.com/items?itemName=kortina.vscode-markdown-notes) que agora foram substituídos por nossa própria implementação, mas foram fundamentais para o início do Foam.
 

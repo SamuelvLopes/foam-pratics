@@ -1,10 +1,10 @@
-# Adding Custom Snippets
+# Adicionando Snippets Personalizados
 
-You can add custom snippets whilst the default set of snippets are decided by following the below steps:
+Você pode adicionar snippets personalizados enquanto o conjunto padrão de snippets é decidido seguindo os passos abaixo:
 
-1. `Cmd` + `Shift` + `P` (`Ctrl` + `Shift` + `P` for Windows), type `snippets` and select `Preferences: Configure User Snippets`.
-2. The command palette will remain in focus. Search for `markdown` and select the entry entitled `markdown.json (Markdown)`.
-3. A JSON file will open. You can author your own snippets using the [documentation](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_create-your-own-snippets) to help you, or if you're using a snippet shared by another Foam user then you can copy and paste it in, as the below GIF demonstrates:
-   ![Demonstrating adding a custom snippet](../../assets/images/custom-snippet.gif)
+1. `Cmd` + `Shift` + `P` (`Ctrl` + `Shift` + `P` para Windows), digite `snippets` e selecione `Preferences: Configure User Snippets`.
+2. A paleta de comandos permanecerá em foco. Procure por `markdown` e selecione a entrada intitulada `markdown.json (Markdown)`.
+3. Um arquivo JSON será aberto. Você pode criar seus próprios snippets usando a [documentação](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_create-your-own-snippets) para ajudá-lo, ou se você estiver usando um snippet compartilhado por outro usuário do Foam, você pode copiá-lo e colá-lo, como o GIF abaixo demonstra:
+   ![Demonstração de adição de um snippet personalizado](../../assets/images/custom-snippet.gif)
 
-To get started, you might consider replacing the entire contents of the `markdown.json` file opened by the steps above with the JSON in [this comment](https://github.com/foambubble/foam/pull/192#issuecomment-666736270).
+Para começar, você pode considerar substituir todo o conteúdo do arquivo `markdown.json` aberto pelos passos acima com o JSON neste [comentário](https://github.com/foambubble/foam/pull/192#issuecomment-666736270).

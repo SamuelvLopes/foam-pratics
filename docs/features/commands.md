@@ -1,26 +1,26 @@
-# Foam Commands
+# Comandos do Foam
 
-Foam has various commands that you can explore by calling the command palette and typing "Foam".
+O Foam tem vários comandos que você pode explorar chamando a paleta de comandos e digitando "Foam".
 
-In particular, some commands can be very customizable and can help with custom workflows and use cases.
+Em particular, alguns comandos podem ser muito personalizáveis e podem ajudar com fluxos de trabalho e casos de uso personalizados.
 
-## foam-vscode.create-note command
+## Comando foam-vscode.create-note
 
-This command creates a note.
-Although it works fine on its own, it can be customized to achieve various use cases.
-Here are the settings available for the command:
+Este comando cria uma nota.
+Embora funcione bem por si só, ele pode ser personalizado para alcançar vários casos de uso.
+Aqui estão as configurações disponíveis para o comando:
 
-- `notePath`: The path of the note to create. If relative it will be resolved against the workspace root.
-- `templatePath`: The path of the template to use. If relative it will be resolved against the workspace root.
-- `title`: The title of the note (that is, the `FOAM_TITLE` variable)
-- `text`: The text to use for the note. If also a template is provided, the template has precedence
-- `variables`: Variables to use in the text or template
-- `date`: The date used to resolve the FOAM*DATE*\* variables. in `YYYY-MM-DD` format
-- `onFileExists?: 'overwrite' | 'open' | 'ask' | 'cancel'`: What to do in case the target file already exists
+- `notePath`: O caminho da nota a ser criada. Se for relativo, será resolvido em relação à raiz do espaço de trabalho.
+- `templatePath`: O caminho do modelo a ser usado. Se for relativo, será resolvido em relação à raiz do espaço de trabalho.
+- `title`: O título da nota (ou seja, a variável `FOAM_TITLE`)
+- `text`: O texto a ser usado para a nota. Se um modelo também for fornecido, o modelo tem precedência
+- `variables`: Variáveis a serem usadas no texto ou modelo
+- `date`: A data usada para resolver as variáveis FOAM*DATE*\*. no formato `YYYY-MM-DD`
+- `onFileExists?: 'overwrite' | 'open' | 'ask' | 'cancel'`: O que fazer caso o arquivo de destino já exista
 
-To customize a command and associate a key binding to it, open the key binding settings and add the appropriate configuration, here are some examples:
+Para personalizar um comando e associar uma tecla de atalho a ele, abra as configurações de teclas de atalho e adicione a configuração apropriada, aqui estão alguns exemplos:
 
-- Create a note called `test note.md` with some text. If the note already exists, ask for a new name
+- Criar uma nota chamada `test note.md` com algum texto. Se a nota já existir, perguntar por um novo nome
 
 ```
 {
@@ -34,7 +34,7 @@ To customize a command and associate a key binding to it, open the key binding s
 }
 ```
 
-- Create a note following the `weekly-note.md` template. If the note already exists, open it
+- Criar uma nota seguindo o modelo `weekly-note.md`. Se a nota já existir, abri-la
 
 ```
 {
@@ -47,18 +47,18 @@ To customize a command and associate a key binding to it, open the key binding s
 }
 ```
 
-## foam-vscode.open-resource command
+## Comando foam-vscode.open-resource
 
-This command opens a resource.
+Este comando abre um recurso.
 
-Normally it receives a `URI`, which identifies the resource to open.
+Normalmente ele recebe um `URI`, que identifica o recurso a ser aberto.
 
-It is also possible to pass in a filter, which will be run against the workspace resources to find one or more matches.
+Também é possível passar um filtro, que será executado contra os recursos do espaço de trabalho para encontrar uma ou mais correspondências.
 
-- If there is one match, it will be opened
-- If there is more than one match, a quick pick will show up allowing the user to select the desired resource
+- Se houver uma correspondência, ela será aberta
+- Se houver mais de uma correspondência, um seletor rápido será exibido permitindo que o usuário selecione o recurso desejado
 
-Examples:
+Exemplos:
 
 ```
 {

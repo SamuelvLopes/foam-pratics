@@ -1,35 +1,35 @@
-# Note Templates
+# Modelos de Notas
 
-Foam supports note templates which let you customize the starting content of your notes instead of always starting from an empty note.
+O Foam suporta modelos de notas que permitem que você personalize o conteúdo inicial de suas notas em vez de sempre começar com uma nota vazia.
 
-Note templates are `.md` files located in the special `.foam/templates` directory of your workspace.
+Os modelos de notas são arquivos `.md` localizados no diretório especial `.foam/templates` do seu espaço de trabalho.
 
-## Quickstart
+## Início Rápido
 
-Create a template:
+Crie um modelo:
 
-- Run the `Foam: Create New Template` command from the command palette
-- OR manually create a regular `.md` file in the `.foam/templates` directory
+- Execute o comando `Foam: Create New Template` na paleta de comandos
+- OU crie manualmente um arquivo `.md` regular no diretório `.foam/templates`
 
-![Create new template GIF](../../assets/images/create-new-template.gif)
+![Criar novo modelo GIF](../../assets/images/create-new-template.gif)
 
-_Theme: Ayu Light_
+_Tema: Ayu Light_
 
-To create a note from a template:
+Para criar uma nota a partir de um modelo:
 
-- Run the `Foam: Create New Note From Template` command and follow the instructions. Don't worry if you've not created a template yet! You'll be prompted to create a new template if none exist.
-- OR run the `Foam: Create New Note` command, which uses the special default template (`.foam/templates/new-note.md`, if it exists)
+- Execute o comando `Foam: Create New Note From Template` e siga as instruções. Não se preocupe se você ainda não criou um modelo! Você será solicitado a criar um novo modelo se nenhum existir.
+- OU execute o comando `Foam: Create New Note`, que usa o modelo padrão especial (`.foam/templates/new-note.md`, se existir)
 
-![Create new note from template GIF](../../assets/images/create-new-note-from-template.gif)
+![Criar nova nota a partir do modelo GIF](../../assets/images/create-new-note-from-template.gif)
 
-_Theme: Ayu Light_
+_Tema: Ayu Light_
 
-## Special templates
+## Modelos Especiais
 
-### Default template
+### Modelo Padrão
 
-The `.foam/templates/new-note.md` template is special in that it is the template that will be used by the `Foam: Create New Note` command.
-Customize this template to contain content that you want included every time you create a note. To begin it is _recommended_ to define the YAML Front-Matter of the template similar to the following:
+O modelo `.foam/templates/new-note.md` é especial porque é o modelo que será usado pelo comando `Foam: Create New Note`.
+Personalize este modelo para conter o conteúdo que você deseja incluir sempre que criar uma nota. Para começar, é _recomendado_ definir o YAML Front-Matter do modelo similar ao seguinte:
 
 ```markdown
 ---
@@ -37,10 +37,10 @@ type: basic-note
 ---
 ```
 
-### Default daily note template
+### Modelo Padrão de Nota Diária
 
-The `.foam/templates/daily-note.md` template is special in that it is the template that will be used when creating daily notes (e.g. by using `Foam: Open Daily Note`).
-Customize this template to contain content that you want included every time you create a daily note. To begin it is _recommended_ to define the YAML Front-Matter of the template similar to the following:
+O modelo `.foam/templates/daily-note.md` é especial porque é o modelo que será usado ao criar notas diárias (por exemplo, usando `Foam: Open Daily Note`).
+Personalize este modelo para conter o conteúdo que você deseja incluir sempre que criar uma nota diária. Para começar, é _recomendado_ definir o YAML Front-Matter do modelo similar ao seguinte:
 
 ```markdown
 ---
@@ -48,171 +48,171 @@ type: daily-note
 ---
 ```
 
-## Variables
+## Variáveis
 
-Templates can use all the variables available in [VS Code Snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_variables).
+Os modelos podem usar todas as variáveis disponíveis em [Snippets do VS Code](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_variables).
 
-In addition, you can also use variables provided by Foam:
+Além disso, você também pode usar variáveis fornecidas pelo Foam:
 
-| Name                 | Description                                                                                                                                                                                                                                  |
-| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `FOAM_SELECTED_TEXT` | Foam will fill it with selected text when creating a new note, if any text is selected. Selected text will be replaced with a wikilink to the new                                                                                            |
-| `FOAM_TITLE`         | The title of the note. If used, Foam will prompt you to enter a title for the note.                                                                                                                                                          |
-| `FOAM_TITLE_SAFE`    | The title of the note in a file system safe format. If used, Foam will prompt you to enter a title for the note unless `FOAM_TITLE` has already caused the prompt.                                                                           |
-| `FOAM_SLUG`          | The sluggified title of the note (using the default github slug method). If used, Foam will prompt you to enter a title for the note unless `FOAM_TITLE` has already caused the prompt.                                                      |
-| `FOAM_DATE_*`        | `FOAM_DATE_YEAR`, `FOAM_DATE_MONTH`, `FOAM_DATE_WEEK` etc. Foam-specific versions of [VS Code's datetime snippet variables](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_variables). Prefer these versions over VS Code's. |
+| Nome                 | Descrição                                                                                                                                                                                                                                   |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `FOAM_SELECTED_TEXT` | O Foam preencherá com o texto selecionado ao criar uma nova nota, se algum texto estiver selecionado. O texto selecionado será substituído por um wikilink para a nova nota                                                                  |
+| `FOAM_TITLE`         | O título da nota. Se usado, o Foam solicitará que você insira um título para a nota.                                                                                                                                                         |
+| `FOAM_TITLE_SAFE`    | O título da nota em um formato seguro para o sistema de arquivos. Se usado, o Foam solicitará que você insira um título para a nota, a menos que `FOAM_TITLE` já tenha causado o prompt.                                                     |
+| `FOAM_SLUG`          | O título da nota em formato slug (usando o método de slug padrão do github). Se usado, o Foam solicitará que você insira um título para a nota, a menos que `FOAM_TITLE` já tenha causado o prompt.                                          |
+| `FOAM_DATE_*`        | `FOAM_DATE_YEAR`, `FOAM_DATE_MONTH`, `FOAM_DATE_WEEK` etc. Versões específicas do Foam das [variáveis de snippet de datetime do VS Code](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_variables). Prefira estas versões às do VS Code. |
 
-### `FOAM_DATE_*` variables
+### Variáveis `FOAM_DATE_*`
 
-Foam defines its own set of datetime variables that have a similar behaviour as [VS Code's datetime snippet variables](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_variables).
+O Foam define seu próprio conjunto de variáveis de datetime que têm um comportamento similar às [variáveis de snippet de datetime do VS Code](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_variables).
 
-For example, `FOAM_DATE_YEAR` has the same behaviour as VS Code's `CURRENT_YEAR`, `FOAM_DATE_SECONDS_UNIX` has the same behaviour as `CURRENT_SECONDS_UNIX`, etc.
+Por exemplo, `FOAM_DATE_YEAR` tem o mesmo comportamento que o `CURRENT_YEAR` do VS Code, `FOAM_DATE_SECONDS_UNIX` tem o mesmo comportamento que `CURRENT_SECONDS_UNIX`, etc.
 
-By default, prefer using the `FOAM_DATE_` versions. The datetime used to compute the values will be the same for both `FOAM_DATE_` and VS Code's variables, with the exception of the creation notes using the daily note template.
+Por padrão, prefira usar as versões `FOAM_DATE_`. O datetime usado para calcular os valores será o mesmo para ambas as variáveis `FOAM_DATE_` e do VS Code, com exceção da criação de notas usando o modelo de nota diária.
 
-For more nitty-gritty details about the supported date formats, [see here](https://github.com/foambubble/foam/blob/main/packages/foam-vscode/src/services/variable-resolver.ts).
+Para mais detalhes técnicos sobre os formatos de data suportados, [veja aqui](https://github.com/foambubble/foam/blob/main/packages/foam-vscode/src/services/variable-resolver.ts).
 
-#### Relative daily notes
+#### Notas diárias relativas
 
-When referring to daily notes, you can use the relative snippets (`/+1d`, `/tomorrow`, etc.). In these cases, the new notes will be created with the daily note template, but the datetime used should be the relative datetime, not the current datetime.
-By using the `FOAM_DATE_` versions of the variables, the correct relative date will populate the variables, instead of the current datetime.
+Ao se referir a notas diárias, você pode usar os snippets relativos (`/+1d`, `/tomorrow`, etc.). Nesses casos, as novas notas serão criadas com o modelo de nota diária, mas o datetime usado deve ser o datetime relativo, não o datetime atual.
+Ao usar as versões `FOAM_DATE_` das variáveis, a data relativa correta preencherá as variáveis, em vez do datetime atual.
 
-For example, given this daily note template (`.foam/templates/daily-note.md`):
+Por exemplo, dado este modelo de nota diária (`.foam/templates/daily-note.md`):
 
 ```markdown
 # $FOAM_DATE_YEAR-$FOAM_DATE_MONTH-$FOAM_DATE_DATE
 
-## Here's what I'm going to do today
+## Aqui está o que vou fazer hoje
 
-- Thing 1
-- Thing 2
+- Coisa 1
+- Coisa 2
 ```
 
-When the `/tomorrow` snippet is used, `FOAM_DATE_` variables will be populated with tomorrow's date, as expected.
-If instead you were to use the VS Code versions of these variables, they would be populated with today's date, not tomorrow's, causing unexpected behaviour.
+Quando o snippet `/tomorrow` é usado, as variáveis `FOAM_DATE_` serão preenchidas com a data de amanhã, como esperado.
+Se em vez disso você usasse as versões do VS Code dessas variáveis, elas seriam preenchidas com a data de hoje, não a de amanhã, causando um comportamento inesperado.
 
-When creating notes in any other scenario, the `FOAM_DATE_` values are computed using the same datetime as the VS Code ones, so the `FOAM_DATE_` versions can be used in all scenarios by default.
+Ao criar notas em qualquer outro cenário, os valores `FOAM_DATE_` são calculados usando o mesmo datetime que os do VS Code, então as versões `FOAM_DATE_` podem ser usadas em todos os cenários por padrão.
 
-## Metadata
+## Metadados
 
-Templates can also contain metadata about the templates themselves. The metadata is defined in YAML "Frontmatter" blocks within the templates.
+Os modelos também podem conter metadados sobre os próprios modelos. Os metadados são definidos em blocos YAML "Frontmatter" dentro dos modelos.
 
-| Name          | Description                                                                                                                      |
-| ------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `filepath`    | The filepath to use when creating the new note. If the filepath is a relative filepath, it is relative to the current workspace. |
-| `name`        | A human readable name to show in the template picker.                                                                            |
-| `description` | A human readable description to show in the template picker.                                                                     |
+| Nome          | Descrição                                                                                                                         |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `filepath`    | O caminho do arquivo a ser usado ao criar a nova nota. Se o caminho for relativo, ele é relativo ao espaço de trabalho atual.     |
+| `name`        | Um nome legível por humanos para mostrar no seletor de modelos.                                                                    |
+| `description` | Uma descrição legível por humanos para mostrar no seletor de modelos.                                                              |
 
-Foam-specific variables (e.g. `$FOAM_TITLE`) can be used within template metadata. However, VS Code snippet variables are ([currently](https://github.com/foambubble/foam/pull/655)) not supported.
+Variáveis específicas do Foam (por exemplo, `$FOAM_TITLE`) podem ser usadas dentro dos metadados do modelo. No entanto, as variáveis de snippet do VS Code ([atualmente](https://github.com/foambubble/foam/pull/655)) não são suportadas.
 
-### `filepath` attribute
+### Atributo `filepath`
 
-The `filepath` metadata attribute allows you to define a relative or absolute filepath to use when creating a note using the template. If the filepath is a relative filepath, it is relative to the current workspace.
+O atributo de metadados `filepath` permite que você defina um caminho de arquivo relativo ou absoluto a ser usado ao criar uma nota usando o modelo. Se o caminho do arquivo for relativo, ele é relativo ao espaço de trabalho atual.
 
-#### Example of **relative** `filepath`
+#### Exemplo de `filepath` **relativo**
 
-For example, `filepath` can be used to customize `.foam/templates/new-note.md`, overriding the default `Foam: Create New Note` behaviour of opening the file in the same directory as the active file:
+Por exemplo, `filepath` pode ser usado para personalizar `.foam/templates/new-note.md`, substituindo o comportamento padrão do `Foam: Create New Note` de abrir o arquivo no mesmo diretório que o arquivo ativo:
 
 ```yaml
 ---
-# This will create the note in the "journal" subdirectory of the current workspace,
-# regardless of which file is the active file.
+# Isso criará a nota no subdiretório "journal" do espaço de trabalho atual,
+# independentemente de qual arquivo está ativo.
 foam_template:
   filepath: 'journal/$FOAM_TITLE.md'
 ---
 ```
 
-#### Example of **absolute** `filepath`
+#### Exemplo de `filepath` **absoluto**
 
-`filepath` can be an absolute filepath, so that the notes get created in the same location, regardless of which file or workspace the editor currently has open.
-The format of an absolute filepath may vary depending on the filesystem used.
+`filepath` pode ser um caminho absoluto, para que as notas sejam criadas no mesmo local, independentemente de qual arquivo ou espaço de trabalho o editor tem aberto atualmente.
+O formato de um caminho absoluto pode variar dependendo do sistema de arquivos usado.
 
 ```yaml
 ---
 foam_template:
-  # Unix / MacOS filesystems
+  # Sistemas Unix / MacOS
   filepath: '/Users/john.smith/foam/journal/$FOAM_TITLE.md'
 
-  # Windows filesystems
+  # Sistemas Windows
   filepath: 'C:\Users\john.smith\Documents\foam\journal\$FOAM_TITLE.md'
 ---
 ```
 
-#### Example of **date-based** `filepath`
+#### Exemplo de `filepath` **baseado em data**
 
-It is possible to vary the `filepath` value based on the current date using the `FOAM_DATE_*` variables. This is especially useful for the [[daily-notes]] template if you wish to organize by years, months, etc. Below is an example of a daily-note template metadata section that will create new daily notes under the `journal/YEAR/MONTH-MONTH_NAME/` filepath. For example, when a note is created on November 15, 2022, a new file will be created at `C:\Users\foam_user\foam_notes\journal\2022\11-Nov\2022-11-15-daily-note.md`. This method also respects the creation of daily notes relative to the current date (i.e. `/+1d`).
+É possível variar o valor do `filepath` com base na data atual usando as variáveis `FOAM_DATE_*`. Isso é especialmente útil para o modelo de [[daily-notes]] se você deseja organizar por anos, meses, etc. Abaixo está um exemplo de uma seção de metadados do modelo de nota diária que criará novas notas diárias sob o caminho `journal/ANO/MES-NOME_MES/`. Por exemplo, quando uma nota é criada em 15 de novembro de 2022, um novo arquivo será criado em `C:\Users\foam_user\foam_notes\journal\2022\11-Nov\2022-11-15-daily-note.md`. Este método também respeita a criação de notas diárias relativas à data atual (ou seja, `/+1d`).
 
 ```markdown
 ---
 type: daily-note
 foam_template:
-  description: Daily Note for $FOAM_TITLE
+  description: Nota Diária para $FOAM_TITLE
   filepath: "C:\\Users\\foam_user\\foam_notes\\journal\\$FOAM_DATE_YEAR\\$FOAM_DATE_MONTH-$FOAM_DATE_MONTH_NAME_SHORT\\$FOAM_DATE_YEAR-$FOAM_DATE_MONTH-$FOAM_DATE_DATE-daily-note.md"
 ---
 
-# $FOAM_DATE_YEAR-$FOAM_DATE_MONTH-$FOAM_DATE_DATE Daily Notes
+# Notas Diárias de $FOAM_DATE_YEAR-$FOAM_DATE_MONTH-$FOAM_DATE_DATE
 ```
 
-> Note: this method **requires** the use of absolute file paths, and in this example is using Windows path conventions. This method will also override any filename formatting defined in `.vscode/settings.json`
+> Nota: este método **requer** o uso de caminhos absolutos e, neste exemplo, está usando convenções de caminho do Windows. Este método também substituirá qualquer formatação de nome de arquivo definida em `.vscode/settings.json`
 
-### `name` and `description` attributes
+### Atributos `name` e `description`
 
-These attributes provide a human readable name and description to be shown in the template picker (e.g. When a user uses the `Foam: Create New Note From Template` command):
+Estes atributos fornecem um nome e uma descrição legíveis por humanos para serem mostrados no seletor de modelos (por exemplo, quando um usuário usa o comando `Foam: Create New Note From Template`):
 
-![Template Picker annotated with attributes](../../assets/images/template-picker-annotated.png)
+![Seletor de Modelos anotado com atributos](../../assets/images/template-picker-annotated.png)
 
-### Adding template metadata to an existing YAML Frontmatter block
+### Adicionando metadados do modelo a um bloco YAML Frontmatter existente
 
-If your template already has a YAML Frontmatter block, you can add the Foam template metadata to it.
+Se seu modelo já tem um bloco YAML Frontmatter, você pode adicionar os metadados do modelo a ele.
 
-#### Limitations
+#### Limitações
 
-Foam only supports adding the template metadata to _YAML_ Frontmatter blocks. If the existing Frontmatter block uses some other format (e.g. JSON), you will have to add the template metadata to its own YAML Frontmatter block.
+O Foam só suporta adicionar os metadados do modelo a blocos Frontmatter _YAML_. Se o bloco Frontmatter existente usa algum outro formato (por exemplo, JSON), você terá que adicionar os metadados do modelo em seu próprio bloco YAML Frontmatter.
 
-Further, the template metadata must be provided as a [YAML block mapping](https://yaml.org/spec/1.2/spec.html#id2798057), with the attributes placed on the lines immediately following the `foam_template` line:
+Além disso, os metadados do modelo devem ser fornecidos como um [mapeamento de bloco YAML](https://yaml.org/spec/1.2/spec.html#id2798057), com os atributos colocados nas linhas imediatamente após a linha `foam_template`:
 
 ```yaml
 ---
-existing_frontmatter: "Existing Frontmatter block"
-foam_template: # this is a YAML "Block" mapping ("Flow" mappings aren't supported)
-  name: My Note Template # Attributes must be on the lines immediately following `foam_template`
-  description: This is my note template
+existing_frontmatter: "Bloco Frontmatter existente"
+foam_template: # isto é um mapeamento de "Bloco" YAML (mapeamentos de "Fluxo" não são suportados)
+  name: Meu Modelo de Nota # Os atributos devem estar nas linhas imediatamente após `foam_template`
+  description: Este é meu modelo de nota
   filepath: `journal/$FOAM_TITLE.md`
 ---
-This is the rest of the template
+Este é o resto do modelo
 ```
 
-Due to the technical limitations of parsing the complex YAML format, unless the metadata is provided this specific form, Foam is unable to correctly remove the template metadata before creating the resulting note.
+Devido às limitações técnicas de análise do formato YAML complexo, a menos que os metadados sejam fornecidos nesta forma específica, o Foam não consegue remover corretamente os metadados do modelo antes de criar a nota resultante.
 
-If this limitation proves inconvenient to you, please let us know. We may be able to extend our parsing capabilities to cover your use case. In the meantime, you can add the template metadata without this limitation by providing it in its own YAML Frontmatter block.
+Se esta limitação se mostrar inconveniente para você, por favor nos avise. Podemos estender nossas capacidades de análise para cobrir seu caso de uso. Enquanto isso, você pode adicionar os metadados do modelo sem esta limitação fornecendo-os em seu próprio bloco YAML Frontmatter.
 
-### Adding template metadata to its own YAML Frontmatter block
+### Adicionando metadados do modelo em seu próprio bloco YAML Frontmatter
 
-You can add the template metadata to its own YAML Frontmatter block at the start of the template:
+Você pode adicionar os metadados do modelo em seu próprio bloco YAML Frontmatter no início do modelo:
 
 ```yaml
 ---
 foam_template:
-  name: My Note Template
-  description: This is my note template
+  name: Meu Modelo de Nota
+  description: Este é meu modelo de nota
   filepath: 'journal/$FOAM_TITLE.md'
 ---
-This is the rest of the template
+Este é o resto do modelo
 ```
 
-If the note already has a Frontmatter block, a Foam-specific Frontmatter block can be added to the start of the template. The Foam-specific Frontmatter block must always be placed at the very beginning of the file, and only whitespace can separate the two Frontmatter blocks.
+Se a nota já tem um bloco Frontmatter, um bloco Frontmatter específico do Foam pode ser adicionado ao início do modelo. O bloco Frontmatter específico do Foam deve sempre ser colocado no início do arquivo, e apenas espaços em branco podem separar os dois blocos Frontmatter.
 
 ```yaml
 ---
 foam_template:
-  name: My Note Template
-  description: This is my note template
+  name: Meu Modelo de Nota
+  description: Este é meu modelo de nota
   filepath: 'journal/$FOAM_TITLE.md'
 ---
 
 ---
-existing_frontmatter: 'Existing Frontmatter block'
+existing_frontmatter: 'Bloco Frontmatter existente'
 ---
-This is the rest of the template
+Este é o resto do modelo
 ```
 

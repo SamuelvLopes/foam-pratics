@@ -1,18 +1,18 @@
-# Including notes in a note
+# Incluindo notas em uma nota
 
-In some situations it might be useful to include the content of another note in your current note. Foam supports this displaying within the vscode environment. Note, this does not work out-of-the-box for your publishing solutions.
+Em algumas situações pode ser útil incluir o conteúdo de outra nota em sua nota atual. O Foam suporta isso exibindo dentro do ambiente vscode. Note que isso não funciona por padrão para suas soluções de publicação.
 
-## Including a note
+## Incluindo uma nota
 
-Including a note can be done by adding an `!` before a wikilink definition. For example `![[wikilink]]`.
+Incluir uma nota pode ser feito adicionando um `!` antes de uma definição de wikilink. Por exemplo `![[wikilink]]`.
 
-## Custom styling
+## Estilização personalizada
 
-To modify how an embedded note looks and the scope of its content, see [[built-in-note-embedding-types]]
+Para modificar como uma nota incorporada aparece e o escopo de seu conteúdo, veja [[built-in-note-embedding-types]]
 
-For more fine-grained custom styling, see [[custom-markdown-preview-styles]]
+Para uma estilização personalizada mais detalhada, veja [[custom-markdown-preview-styles]]
 
-## Future possibilities
+## Possibilidades futuras
 
-Work on this feature is evolving and progressing. See the [[inclusion-of-notes]] proposal for the current discussion.
+O trabalho neste recurso está evoluindo e progredindo. Veja a proposta [[inclusion-of-notes]] para a discussão atual.
 

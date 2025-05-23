@@ -1,10 +1,10 @@
-# Backlinking
+# Backlinks
 
-When using [[wikilinks]], you can find all notes that link to a specific note in the **Connections Explorer**
+Ao usar [[wikilinks]], você pode encontrar todas as notas que se vinculam a uma nota específica no **Connections Explorer**
 
-- Run `Cmd` + `Shift` + `P` (`Ctrl` + `Shift` + `P` for Windows), type "connections" and run the **Explorer: Focus on Connections** view.
-- Keep this pane always visible to discover relationships between your thoughts
-- You can drag the connections panel to a different section in VS Code if you prefer. See: [[make-backlinks-more-prominent]]
-- You can filter the connections to see just backlinks, forward links, or all connections
-- Finding backlinks in published Foam workspaces via [[materialized-backlinks]] is on the [[roadmap]] but not yet implemented.
+- Execute `Cmd` + `Shift` + `P` (`Ctrl` + `Shift` + `P` para Windows), digite "connections" e execute a visualização **Explorer: Focus on Connections**.
+- Mantenha este painel sempre visível para descobrir relações entre seus pensamentos
+- Você pode arrastar o painel de conexões para uma seção diferente no VS Code se preferir. Veja: [[make-backlinks-more-prominent]]
+- Você pode filtrar as conexões para ver apenas backlinks, links para frente ou todas as conexões
+- Encontrar backlinks em espaços de trabalho Foam publicados via [[materialized-backlinks]] está no [[roadmap]] mas ainda não foi implementado.
 

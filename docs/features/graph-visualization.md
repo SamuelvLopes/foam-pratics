@@ -1,38 +1,38 @@
-# Graph Visualization
+# Visualização do Grafo
 
-Foam comes with a graph visualization of your notes.
-To see the graph execute the `Foam: Show Graph` command.
+O Foam vem com uma visualização em grafo das suas notas.
+Para ver o grafo, execute o comando `Foam: Show Graph`.
 
-Your files, such as notes and documents, are shown as the nodes of the graph along with the tags defined in your notes. The edges of the graph represent either a link between two files or a file that contains a certain tag. A node in the graph will grow in size with the number of connections it has, representing stronger or more defined concepts and topics.
+Seus arquivos, como notas e documentos, são mostrados como os nós do grafo junto com as tags definidas em suas notas. As arestas do grafo representam ou um link entre dois arquivos ou um arquivo que contém uma determinada tag. Um nó no grafo crescerá em tamanho com o número de conexões que possui, representando conceitos e tópicos mais fortes ou mais definidos.
 
-## Graph Navigation
+## Navegação no Grafo
 
-With the Foam graph visualization you can:
+Com a visualização do grafo do Foam você pode:
 
-- highlight a node by hovering on it, to quickly see how it's connected to the rest of your notes
-- select one or more (by keeping `shift` pressed while selecting) nodes by clicking on them, to better understand the structure of your notes
-- navigate to a note by clicking on it's node while pressing `ctrl` or `cmd`
-- automatically center the graph on the currently edited note, to immediately see its connections
+- destacar um nó passando o mouse sobre ele, para ver rapidamente como ele está conectado ao resto das suas notas
+- selecionar um ou mais nós (mantendo `shift` pressionado durante a seleção) clicando neles, para entender melhor a estrutura das suas notas
+- navegar para uma nota clicando em seu nó enquanto pressiona `ctrl` ou `cmd`
+- centralizar automaticamente o grafo na nota atualmente editada, para ver imediatamente suas conexões
 
-## Filter View
+## Filtrar Visualização
 
-If you only wish to view certain types of notes or tags, or want to hide linked attachment nodes then you can apply filters to the graph.
+Se você deseja visualizar apenas certos tipos de notas ou tags, ou quer ocultar nós de anexos vinculados, você pode aplicar filtros ao grafo.
 
-- Open the graph view using the `Foam: Show Graph` command
-- Click the button in the top right corner of the graph view that says "Open Controls"
-- Expand the "Filter By Type" dropdown to view the selection of types that you can filter by
-- Uncheck the checkbox for any type you want to hide
-- The types displayed in this dropdown are defined by [[note-properties]] which includes Foam-standard types as well as custom types defined by you!
+- Abra a visualização do grafo usando o comando `Foam: Show Graph`
+- Clique no botão no canto superior direito da visualização do grafo que diz "Open Controls"
+- Expanda o menu suspenso "Filter By Type" para ver a seleção de tipos que você pode filtrar
+- Desmarque a caixa de seleção para qualquer tipo que você queira ocultar
+- Os tipos exibidos neste menu suspenso são definidos por [[note-properties]], que inclui tipos padrão do Foam e tipos personalizados definidos por você!
 
-![Graph filtering demo](../../assets/images/graph-filter.gif)
+![Demonstração de filtragem do grafo](../../assets/images/graph-filter.gif)
 
-## Custom Graph Styles
+## Estilos Personalizados do Grafo
 
-The Foam graph will use the current VS Code theme by default, but it's possible to customize it with the `foam.graph.style` setting.
+O grafo do Foam usará o tema atual do VS Code por padrão, mas é possível personalizá-lo com a configuração `foam.graph.style`.
 
-![Graph style demo](../../assets/images/graph-style.gif)
+![Demonstração de estilo do grafo](../../assets/images/graph-style.gif)
 
-A sample configuration object is provided below, you can provide as many or as little configuration as you wish:
+Um exemplo de objeto de configuração é fornecido abaixo, você pode fornecer tanta ou tão pouca configuração quanto desejar:
 
 ```json
 "foam.graph.style": {
@@ -49,30 +49,30 @@ A sample configuration object is provided below, you can provide as many or as l
 }
 ```
 
-- `background` background color of the graph, adjust to increase contrast
-- `fontSize` size of the title font for each node
-- `fontFamily` font of the title font for each node
-- `lineColor` color of the edges between nodes in the graph
-- `lineWidth` thickness of the edges between nodes
-- `particleWidth` size of the particle animation showing link direction when highlighting a node
-- `highlightedForeground` color of highlighted nodes and edges when hovering over a node
-- to style individual types of nodes jump to the next section: [Style Nodes By Type](#style-nodes-by-type)
+- `background` cor de fundo do grafo, ajuste para aumentar o contraste
+- `fontSize` tamanho da fonte do título para cada nó
+- `fontFamily` fonte do título para cada nó
+- `lineColor` cor das arestas entre os nós no grafo
+- `lineWidth` espessura das arestas entre os nós
+- `particleWidth` tamanho da animação de partículas mostrando a direção do link ao destacar um nó
+- `highlightedForeground` cor dos nós e arestas destacados ao passar o mouse sobre um nó
+- para estilizar tipos individuais de nós, pule para a próxima seção: [Estilizar Nós por Tipo](#style-nodes-by-type)
 
-### Style Nodes by Type
+### Estilizar Nós por Tipo
 
-It is possible to customize the style of a node based on the `type` property in the YAML frontmatter of the corresponding document.
+É possível personalizar o estilo de um nó com base na propriedade `type` no frontmatter YAML do documento correspondente.
 
-There are a few default node types defined by Foam that are displayed in the graph:
+Existem alguns tipos de nós padrão definidos pelo Foam que são exibidos no grafo:
 
-- `note` defines the color for regular nodes whose documents have not overridden the `type` property.
-- `placeholder` defines the color for links that don't match any existing note. This is a [[placeholder]] because no file with such name exists.
-  - see [[wikilinks]] for more info <!--NOTE: this placeholder link should NOT have an associated file. This is to demonstrate the custom coloring-->
-- `tag` defines the color for nodes representing #tags, allowing tags to be used as graph nodes similar to backlinks.
-  - see [[tags]] for more info
-- `feature` shows an example of how you can use note types to customize the graph. It defines the color for the notes of type `feature`
-  - see [[note-properties]] for details
+- `note` define a cor para nós regulares cujos documentos não sobrescreveram a propriedade `type`.
+- `placeholder` define a cor para links que não correspondem a nenhuma nota existente. Este é um [[placeholder]] porque nenhum arquivo com esse nome existe.
+  - veja [[wikilinks]] para mais informações <!--NOTE: this placeholder link should NOT have an associated file. This is to demonstrate the custom coloring-->
+- `tag` define a cor para nós representando #tags, permitindo que tags sejam usadas como nós do grafo similar a backlinks.
+  - veja [[tags]] para mais informações
+- `feature` mostra um exemplo de como você pode usar tipos de notas para personalizar o grafo. Define a cor para as notas do tipo `feature`
+  - veja [[note-properties]] para detalhes
 
-For example the following `backlinking.md` note:
+Por exemplo, a seguinte nota `backlinking.md`:
 
 ```markdown
 ---
@@ -83,7 +83,7 @@ type: feature
 ...
 ```
 
-And the following `settings.json`:
+E o seguinte `settings.json`:
 
 ```json
 "foam.graph.style": {
@@ -97,7 +97,7 @@ And the following `settings.json`:
 }
 ```
 
-Will result in the following graph:
+Resultará no seguinte grafo:
 
-![Style node by type](../../assets/images/style-node-by-type.png)
+![Estilizar nó por tipo](../../assets/images/style-node-by-type.png)
 
